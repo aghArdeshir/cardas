@@ -18,5 +18,16 @@ test("attachCanvasToElement attaches canvas to element", () => {
 
   // toEqual in line below works, because jest compares objects by their values
   // (and not by their references)
-  expect(element.firstChild).toEqual(document.createElement("canvas"));
+  expect(element.firstChild).toEqual(
+    expect.objectContaining({ tagName: "CANVAS" })
+  );
+});
+
+test("canvas must have borders", () => {
+  const element = document.createElement("div");
+  attachCanvasToElement(element);
+
+  expect((element.firstChild as HTMLElement).style.border).toBe(
+    "1px solid black"
+  );
 });
