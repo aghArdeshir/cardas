@@ -7,3 +7,7 @@ export function isCanvas(
 export const ctx: CanvasRenderingContext2D = document
   .createElement("canvas")
   .getContext("2d");
+
+export function attachCanvasToElement(element: HTMLElement) {
+  element.appendChild(ctx.canvas);
+}
