@@ -19,6 +19,7 @@
   "homepage": "https://github.com/aghArdeshir/cardas#readme",
   "devDependencies": {
     "@types/jest": "^27.5.1",
+    "jest-canvas-mock": "^2.4.0",
     "jest-environment-jsdom": "^28.1.0",
     "ts-jest": "^28.0.3"
   }
